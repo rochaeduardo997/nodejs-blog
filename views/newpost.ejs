@@ -1,0 +1,31 @@
+<%- include ('partials/header'); %>
+
+  <body>
+    <%- include ('partials/navbar'); %>
+      <div class="container">
+        <br>
+
+        <div class="card" id="post">
+          <div class="card-header">
+            <h3>Nova postagem</h3>
+          </div>
+
+          <div class="card-body">
+            <form method="POST" action="/savepost">
+              <label>Título</label>
+              <input class="form-control" type="text" placeholder="Título" name="title" />
+              <br>
+
+              <label>Conteúdo</label>
+              <textarea class="form-control" placeholder="Escreva sua mensagem aqui" name="body"></textarea>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn btn-success">Postar</button>
+          </div>
+          </form>
+        </div>
+      </div>
+  </body>
+
+  <%- include ('partials/footer'); %>

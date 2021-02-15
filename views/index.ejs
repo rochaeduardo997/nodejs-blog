@@ -1,0 +1,27 @@
+<%- include ('partials/header.ejs'); %>
+
+  <%- include ('partials/navbar.ejs'); %>
+
+    <body>
+      <% posts.forEach(post=> { %>
+        <br>
+        <div class="container">
+          <div class="card">
+            <div class="card-header">
+              <h3>
+                <%= post.title %>
+              </h3>
+            </div>
+
+            <div class="card-body">
+              <%= post.body %>
+            </div>
+          </div>
+          <br>
+          <a class="btn btn-success" href="/post/<%= post.id %>">Responder</a>
+        </div>
+        <% }) %>
+
+    </body>
+
+    <%- include ('partials/footer.ejs'); %>
